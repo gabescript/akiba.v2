@@ -1,0 +1,21 @@
+.container{
+    width: 75rem;
+    margin: 0 auto;
+    @include xl{
+        width: 80%;
+    }
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 20{
+    .col-#{$i}{
+        width: calc(100%/20)*$i;
+        @include xl{
+            width: 100%;
+        }
+    }
+}
