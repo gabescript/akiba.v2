@@ -7,6 +7,7 @@ header("Access-Control-Allow-Credentials: true");
 include('./database.php');
 
 switch($_GET['endpoint']){
+    //Endpoints para o painel administrativo
     case "login":
         login();
     break;

@@ -13,6 +13,15 @@ export default function Login(){
     //Muda o titulo da página
     document.title = "Realize o login | AkibaHub";
 
+    //useStates do alerta de esqueci e errei o usuário ou senha
+    const [esqueci, setEsqueci] = React.useState(0);
+    const [error, setError] = React.useState(0);
+
+    //Função que dispara o alerta quando o usuário clica que esqueceu usuário e/ou senha
+    const DisparadorEsqueci = ()=>{
+        setEsqueci(esqueci+1);
+    }
+
     //Função que controla os alertas
     const Alertas = (props)=>{
         React.useEffect(()=>{
@@ -29,14 +38,14 @@ export default function Login(){
                         Procure a administração da Akiba
                     </div>
                 );
+            case 'error':
+                return(
+                    <div id='login-alerta' style={{backgroundColor: "#ff2e2e"}} className={`${login.alerta} mt-1 radius-5`}>
+                        <strong>Error!</strong> Usuário e/ou senha incorreto(s)!
+                    </div>
+                );
             default:
         }
-    }
-
-    //Disparador do alerta de esqueci usuário ou senha
-    const [esqueci, setEsqueci] = React.useState(0);
-    const DisparadorEsqueci = ()=>{
-        setEsqueci(esqueci+1);
     }
 
     //Requisição assincrona para fazer o login
@@ -57,7 +66,7 @@ export default function Login(){
                 sessionStorage.setItem('Akiba login status', data.status);
                 sessionStorage.setItem('Akiba login usuário', data.usuario);
             }else{
-                alert('Não autorizado');
+                setError(error+1)
             }
           })
           .catch(function (error) {
@@ -89,6 +98,7 @@ export default function Login(){
                                 <button onClick={DisparadorEsqueci} className={`${login.esqueci} cursor`}>Esqueceu seu usuário e/ou senha?</button>
                             </div>
                             {esqueci > 0 && <Alertas method="esqueci"/>}
+                            {error > 0 && <Alertas method="error"/>}
                             <footer className={`${login.rodape} mt-1`}>
                                 <strong>AkibaHub</strong> - Versão 1.0<br/>
                                 Rede Akiba - O Paraíso dos Otakus
