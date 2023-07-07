@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import axios from 'axios';
+import { useNavigate  } from 'react-router-dom';
 
 //Import do API Context
 import { ApiAddress } from '../../../contexts/ApiAddress';
@@ -14,12 +15,15 @@ export default function Login(){
     document.title = "Realize o login | AkibaHub";
 
     //useStates do alerta de esqueci e errei o usuário ou senha
-    const [esqueci, setEsqueci] = React.useState(0);
-    const [error, setError] = React.useState(0);
+    const [esqueci, setEsqueci] = React.useState(false);
+    const [error, setError] = React.useState(false);
 
     //Função que dispara o alerta quando o usuário clica que esqueceu usuário e/ou senha
     const DisparadorEsqueci = ()=>{
-        setEsqueci(esqueci+1);
+        setEsqueci(true);
+        setTimeout(()=>{
+            setEsqueci(false);
+        }, 4*1000);
     }
 
     //Função que controla os alertas
@@ -49,6 +53,7 @@ export default function Login(){
     }
 
     //Requisição assincrona para fazer o login
+    const navigate = useNavigate(); // Obtém a função navigate
     const { api } = React.useContext(ApiAddress);
     const [usuario, setUsuario] = React.useState();
     const [senha, setSenha] = React.useState();
@@ -62,11 +67,16 @@ export default function Login(){
           })
           .then(function (response) {
             const data = response.data;
-            if(data.status === "logado"){
+            if(data.status === "true"){
                 sessionStorage.setItem('Akiba login status', data.status);
                 sessionStorage.setItem('Akiba login usuário', data.usuario);
+                navigate('/painel/dashboard'); // Redireciona para '/painel/dashboard'
             }else{
-                setError(error+1)
+                console.log(response.data)
+                setError(true)
+                setTimeout(()=>{
+                    setError(false);
+                }, 4*1000);
             }
           })
           .catch(function (error) {
@@ -97,8 +107,8 @@ export default function Login(){
                             <div className="d-flex justify-content-center mt-1">
                                 <button onClick={DisparadorEsqueci} className={`${login.esqueci} cursor`}>Esqueceu seu usuário e/ou senha?</button>
                             </div>
-                            {esqueci > 0 && <Alertas method="esqueci"/>}
-                            {error > 0 && <Alertas method="error"/>}
+                            {esqueci && <Alertas method="esqueci"/>}
+                            {error && <Alertas method="error"/>}
                             <footer className={`${login.rodape} mt-1`}>
                                 <strong>AkibaHub</strong> - Versão 1.0<br/>
                                 Rede Akiba - O Paraíso dos Otakus

@@ -19,7 +19,7 @@ function login(){
 
         if($login->rowCount() == 1){
             $logado = array(
-                'status'=>'logado',
+                'status'=>'true',
                 'usuario'=> $login_logado[0]['usuario']
             );
             echo json_encode($logado);
