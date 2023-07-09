@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './assets/css/main.css';
 
+import "bootstrap-icons/font/bootstrap-icons.min.css";
+
 //Import dos contextos
 import { ApiAddressProvider } from './contexts/ApiAddress'
 

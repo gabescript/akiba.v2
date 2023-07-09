@@ -1,0 +1,82 @@
+.navbar {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #FFF6E6;
+}
+@media (max-width: 1140px) {
+  .navbar {
+    padding: 0rem 0rem 0.7rem 0rem;
+    overflow: hidden;
+  }
+}
+.navbar .marca .logo {
+  width: 2rem;
+  margin: 0.75rem 0rem 0rem 0rem;
+}
+.navbar .marca .toggle {
+  display: none;
+}
+@media (max-width: 1140px) {
+  .navbar .marca .toggle {
+    display: block;
+    float: right;
+    margin: 0.8rem 0rem 0rem 0rem;
+    background: none;
+    border: 0;
+    outline: none;
+    font-size: 1.5rem;
+    color: #0076fe;
+  }
+}
+.navbar .lista {
+  margin: -2.1rem 0rem 0rem 0rem;
+}
+@media (max-width: 1140px) {
+  .navbar .lista {
+    display: block;
+    margin: 0.5rem 0rem 0rem 0rem;
+  }
+}
+.navbar .lista .item {
+  list-style: none;
+}
+@media (max-width: 1140px) {
+  .navbar .lista .item {
+    margin: 0rem 0rem 0.7rem 0rem;
+  }
+}
+.navbar .lista .item .link {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.navbar .lista .item .link:hover {
+  color: #0076fe;
+}
+.navbar .lista .item .link:hover img {
+  filter: invert(35%) sepia(48%) saturate(5700%) hue-rotate(201deg) brightness(100%) contrast(106%);
+}
+
+.rodape {
+  width: 100%;
+  background-color: #00061a;
+  position: absolute;
+  bottom: 0rem;
+  padding: 1rem 0rem 1rem 0rem;
+}
+.rodape img {
+  width: 8rem;
+}
+.rodape p {
+  width: 100%;
+  margin: 0.8rem 0rem 0rem 0rem;
+  text-align: center;
+  color: #FFF6E6;
+}
+.rodape p strong {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=Sys.module.css.map */

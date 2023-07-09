@@ -12,7 +12,7 @@ import Logo from '../../../assets/img/img/logo.webp';
 
 export default function Login(){
     //Muda o titulo da página
-    document.title = "Realize o login | AkibaHub";
+    document.title = "Realize o login | AkibaHub ";
 
     //useStates do alerta de esqueci e errei o usuário ou senha
     const [esqueci, setEsqueci] = React.useState(false);
@@ -105,7 +105,7 @@ export default function Login(){
                                 </form>
                             </div>
                             <div className="d-flex justify-content-center mt-1">
-                                <button onClick={DisparadorEsqueci} className={`${login.esqueci} cursor`}>Esqueceu seu usuário e/ou senha?</button>
+                                <button onClick={DisparadorEsqueci} className={`${login.esqueci} cursor`} aria-label="esqueci meu usuário e/ou senha">Esqueceu seu usuário e/ou senha?</button>
                             </div>
                             {esqueci && <Alertas method="esqueci"/>}
                             {error && <Alertas method="error"/>}
