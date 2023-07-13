@@ -1,0 +1,120 @@
+@import "../../../assets/scss/base/_cores.scss", "../../../assets/scss/layout/_breakpoints.scss";
+
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../assets/img/img/login.webp);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.row{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login{
+        position: relative;
+        z-index: 1;
+        .logo{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 13rem;
+            }
+        }
+        .mensagem{
+            width: 100%;
+            display: block;
+            margin: 1rem 0rem 1rem 0rem;
+            font-weight: bold;
+            font-size: 1rem;
+            color: $aurora;
+            text-align: center;
+        }
+        .formulario{
+            display: flex;
+            justify-content: center;
+            form{
+                fieldset{
+                    input{
+                        width: 100%;
+                        height: 4rem;
+                        outline: none;
+                        padding: 0rem 0rem 0rem 1rem;
+                        font-size: 1rem;
+                        &:nth-child(1){
+                            border-radius: 0.5rem 0.5rem 0rem 0rem;
+                            border: 0.1rem solid $cinza-1;
+                        }
+                        &:nth-child(2){
+                            border-radius: 0rem 0rem 0.5rem 0.5rem;
+                            border-bottom: 0.1rem solid $cinza-1;
+                            border-left: 0.1rem solid $cinza-1;
+                            border-right: 0.1rem solid $cinza-1;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        height: 4rem;
+                        cursor: pointer;
+                        border-radius: 0.5rem;
+                        margin: 0.8rem 0rem 0rem 0rem;
+                        background-color: $azul-2;
+                        color: $aurora;
+                        font-size: 1rem;
+                        @include md{
+                            cursor: initial;
+                        }
+                    }
+                }
+            }
+        }
+        .esqueci{
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0rem 0rem 0rem;
+            button{
+                cursor: pointer;
+                background: none;
+                outline: none;
+                color: $aurora;
+                font-size: 1rem;
+                @include md{
+                    cursor: initial;
+                }
+            }
+        }
+        .alerta{
+            width: 100%;
+            display: none;
+            margin: 1rem 0rem 0rem 0rem;
+            padding: 1rem 0.5rem 1rem 0.5rem;
+            background-color: $azul-1;
+            border-radius: 0.5rem;
+            text-align: center;
+            color: $aurora;
+            @include lg{
+                width: 20rem;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 1rem;
+                margin: 0 auto;
+            }
+            @include sm{
+                width: 90%;
+            }
+        }
+        .footer{
+            margin: 1rem 0rem 0rem 0rem;
+            text-align: center;
+            color: $aurora;
+            font-size: 1rem;
+        }
+    }
+}

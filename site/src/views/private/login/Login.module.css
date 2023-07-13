@@ -1,0 +1,124 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/img/img/login.webp);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.row {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row .login {
+  position: relative;
+  z-index: 1;
+}
+.row .login .logo {
+  display: flex;
+  justify-content: center;
+}
+.row .login .logo img {
+  width: 13rem;
+}
+.row .login .mensagem {
+  width: 100%;
+  display: block;
+  margin: 1rem 0rem 1rem 0rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #FFF6E6;
+  text-align: center;
+}
+.row .login .formulario {
+  display: flex;
+  justify-content: center;
+}
+.row .login .formulario form fieldset input {
+  width: 100%;
+  height: 4rem;
+  outline: none;
+  padding: 0rem 0rem 0rem 1rem;
+  font-size: 1rem;
+}
+.row .login .formulario form fieldset input:nth-child(1) {
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  border: 0.1rem solid #cfcfcf;
+}
+.row .login .formulario form fieldset input:nth-child(2) {
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  border-bottom: 0.1rem solid #cfcfcf;
+  border-left: 0.1rem solid #cfcfcf;
+  border-right: 0.1rem solid #cfcfcf;
+}
+.row .login .formulario form fieldset button {
+  width: 100%;
+  height: 4rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin: 0.8rem 0rem 0rem 0rem;
+  background-color: #0076fe;
+  color: #FFF6E6;
+  font-size: 1rem;
+}
+@media (max-width: 720px) {
+  .row .login .formulario form fieldset button {
+    cursor: initial;
+  }
+}
+.row .login .esqueci {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem 0rem 0rem;
+}
+.row .login .esqueci button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: #FFF6E6;
+  font-size: 1rem;
+}
+@media (max-width: 720px) {
+  .row .login .esqueci button {
+    cursor: initial;
+  }
+}
+.row .login .alerta {
+  width: 100%;
+  display: none;
+  margin: 1rem 0rem 0rem 0rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  background-color: #0000ff;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #FFF6E6;
+}
+@media (max-width: 960px) {
+  .row .login .alerta {
+    width: 20rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 540px) {
+  .row .login .alerta {
+    width: 90%;
+  }
+}
+.row .login .footer {
+  margin: 1rem 0rem 0rem 0rem;
+  text-align: center;
+  color: #FFF6E6;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=Login.module.css.map */

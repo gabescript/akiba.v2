@@ -1,0 +1,6 @@
+@mixin reticencia-multipla($rows){
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $rows;
+    display: -webkit-box;
+    overflow: hidden;
+}

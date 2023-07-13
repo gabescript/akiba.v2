@@ -1,8 +1,8 @@
 .container{
     width: 75rem;
     margin: 0 auto;
-    @include xl{
-        width: 80%;
+    @include lg{
+        width: 90%;
     }
 }
 
@@ -14,7 +14,8 @@
 @for $i from 1 through 20{
     .col-#{$i}{
         width: calc(100%/20)*$i;
-        @include xl{
+        padding: 0rem 0.5rem 0rem 0.5rem;
+        @include lg{
             width: 100%;
         }
     }

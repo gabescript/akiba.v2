@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/*
+    Aqui será incluido as estilizações que servirão como base para todo o projeto.
+    As estilizações das páginas será modularizada usando a funcionalidade de module do React JS.
+
+    Observação: O arquivo de "_breakpoints" foi importado pois o arquivo "_grid" usa mixins de "_breakpoints"
+*/
 @font-face {
   font-family: averta;
   src: url(../fonts/AvertaExtraBold.otf);
@@ -8,7 +15,7 @@
   font-family: averta;
   src: url(../fonts/AvertaRegular.otf);
   font-display: swap;
-  font-weight: normal;
+  font-weight: bold;
 }
 * {
   margin: 0;
@@ -23,9 +30,9 @@
   width: 75rem;
   margin: 0 auto;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -36,8 +43,9 @@
 
 .col-1 {
   width: 5%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-1 {
     width: 100%;
   }
@@ -45,8 +53,9 @@
 
 .col-2 {
   width: 10%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-2 {
     width: 100%;
   }
@@ -54,8 +63,9 @@
 
 .col-3 {
   width: 15%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-3 {
     width: 100%;
   }
@@ -63,8 +73,9 @@
 
 .col-4 {
   width: 20%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-4 {
     width: 100%;
   }
@@ -72,8 +83,9 @@
 
 .col-5 {
   width: 25%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-5 {
     width: 100%;
   }
@@ -81,8 +93,9 @@
 
 .col-6 {
   width: 30%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-6 {
     width: 100%;
   }
@@ -90,8 +103,9 @@
 
 .col-7 {
   width: 35%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-7 {
     width: 100%;
   }
@@ -99,8 +113,9 @@
 
 .col-8 {
   width: 40%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-8 {
     width: 100%;
   }
@@ -108,8 +123,9 @@
 
 .col-9 {
   width: 45%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-9 {
     width: 100%;
   }
@@ -117,8 +133,9 @@
 
 .col-10 {
   width: 50%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-10 {
     width: 100%;
   }
@@ -126,8 +143,9 @@
 
 .col-11 {
   width: 55%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-11 {
     width: 100%;
   }
@@ -135,8 +153,9 @@
 
 .col-12 {
   width: 60%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-12 {
     width: 100%;
   }
@@ -144,8 +163,9 @@
 
 .col-13 {
   width: 65%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-13 {
     width: 100%;
   }
@@ -153,8 +173,9 @@
 
 .col-14 {
   width: 70%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-14 {
     width: 100%;
   }
@@ -162,8 +183,9 @@
 
 .col-15 {
   width: 75%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-15 {
     width: 100%;
   }
@@ -171,8 +193,9 @@
 
 .col-16 {
   width: 80%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-16 {
     width: 100%;
   }
@@ -180,8 +203,9 @@
 
 .col-17 {
   width: 85%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-17 {
     width: 100%;
   }
@@ -189,8 +213,9 @@
 
 .col-18 {
   width: 90%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-18 {
     width: 100%;
   }
@@ -198,8 +223,9 @@
 
 .col-19 {
   width: 95%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-19 {
     width: 100%;
   }
@@ -207,208 +233,12 @@
 
 .col-20 {
   width: 100%;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .col-20 {
     width: 100%;
   }
-}
-
-.cursor {
-  cursor: pointer;
-}
-@media (max-width: 960px) {
-  .cursor {
-    cursor: initial;
-  }
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-block {
-  display: block;
-}
-
-.wrap {
-  flex-wrap: wrap;
-}
-
-.gap-1 {
-  grid-gap: 1rem;
-}
-
-.gap-2 {
-  grid-gap: 2rem;
-}
-
-.gap-3 {
-  grid-gap: 3rem;
-}
-
-.gap-4 {
-  grid-gap: 4rem;
-}
-
-.gap-5 {
-  grid-gap: 5rem;
-}
-
-.gap-6 {
-  grid-gap: 6rem;
-}
-
-.gap-7 {
-  grid-gap: 7rem;
-}
-
-.gap-8 {
-  grid-gap: 8rem;
-}
-
-.gap-9 {
-  grid-gap: 9rem;
-}
-
-.gap-10 {
-  grid-gap: 10rem;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.align-itens-center {
-  align-items: center;
-}
-
-.vw-100 {
-  width: 100vw;
-}
-
-.vh-100 {
-  height: 100vh;
-}
-
-.mt-1 {
-  margin-top: 1rem;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mt-3 {
-  margin-top: 3rem;
-}
-
-.mt-4 {
-  margin-top: 4rem;
-}
-
-.mt-5 {
-  margin-top: 5rem;
-}
-
-.mt-6 {
-  margin-top: 6rem;
-}
-
-.mt-7 {
-  margin-top: 7rem;
-}
-
-.mt-8 {
-  margin-top: 8rem;
-}
-
-.mt-9 {
-  margin-top: 9rem;
-}
-
-.mt-10 {
-  margin-top: 10rem;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
-.mb-3 {
-  margin-bottom: 3rem;
-}
-
-.mb-4 {
-  margin-bottom: 4rem;
-}
-
-.mb-5 {
-  margin-bottom: 5rem;
-}
-
-.mb-6 {
-  margin-bottom: 6rem;
-}
-
-.mb-7 {
-  margin-bottom: 7rem;
-}
-
-.mb-8 {
-  margin-bottom: 8rem;
-}
-
-.mb-9 {
-  margin-bottom: 9rem;
-}
-
-.mb-10 {
-  margin-bottom: 10rem;
-}
-
-.radius-1 {
-  border-radius: 0.1rem;
-}
-
-.radius-2 {
-  border-radius: 0.2rem;
-}
-
-.radius-3 {
-  border-radius: 0.3rem;
-}
-
-.radius-4 {
-  border-radius: 0.4rem;
-}
-
-.radius-5 {
-  border-radius: 0.5rem;
-}
-
-.radius-6 {
-  border-radius: 0.6rem;
-}
-
-.radius-7 {
-  border-radius: 0.7rem;
-}
-
-.radius-8 {
-  border-radius: 0.8rem;
-}
-
-.radius-9 {
-  border-radius: 0.9rem;
-}
-
-.radius-10 {
-  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

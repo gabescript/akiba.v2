@@ -1,11 +1,8 @@
-//Base
-@import "base/cores.scss";
-@import "base/tipografia.scss";
-@import "base/reset.scss";
+/*
+    Aqui será incluido as estilizações que servirão como base para todo o projeto.
+    As estilizações das páginas será modularizada usando a funcionalidade de module do React JS.
 
-//Layout 
-@import "layout/breakpoint.scss";
-@import "layout/grid.scss";
+    Observação: O arquivo de "_breakpoints" foi importado pois o arquivo "_grid" usa mixins de "_breakpoints"
+*/
 
-//Util
-@import "util/global.scss";
+@import "base/_tipografia.scss", "base/_reset.scss", "layout/_breakpoints.scss", "layout/_grid.scss";
