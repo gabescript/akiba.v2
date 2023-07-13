@@ -6,12 +6,21 @@ import Logo from '../../../assets/img/img/logo.webp'
 
 export default function Login(){
 
-    //Alertas
-    const [alertaEsqueci, setAlertaEsqueci] = React.useState(false)
+    document.title = "Realize o login | AkibaHub"
+
+    const [alerta, setAlerta] = React.useState(false)
+
+    React.useEffect(function(){
+        //Alerta caso o usuário clique no botão que esqueceu o usuário ou senha
+        if(alerta === true){
+            AlertaEsqueci()
+        }
+    })
     
+    //---Alerta caso o usuário clique no botão que esqueceu o usuário ou senha---
     function DisparadorAlertaEsqueci(){
-        setAlertaEsqueci(true)
-        setTimeout(function(){ setAlertaEsqueci(false) }, 4*1000)
+        setAlerta(true)
+        setTimeout(function(){ setAlerta(false) }, 4*1000)
     }
 
     function AlertaEsqueci(){
@@ -23,12 +32,6 @@ export default function Login(){
             </div>
         )
     }
-
-    React.useEffect(function(){
-        if(alertaEsqueci === true){
-            AlertaEsqueci()
-        }
-    })
 
     return(
         <>
@@ -53,7 +56,7 @@ export default function Login(){
                             <div className={login.esqueci}>
                                 <button onClick={DisparadorAlertaEsqueci}>Problemas ao fazer login?</button>
                             </div>
-                            {alertaEsqueci && <AlertaEsqueci/>}
+                            {alerta && <AlertaEsqueci/>}
                             <footer className={login.footer}>
                                 AkibaHub - Versão 1.0<br/>
                                 Rede Akiba - O Paraíso dos Otakus
